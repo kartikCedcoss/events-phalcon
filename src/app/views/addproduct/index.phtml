@@ -1,0 +1,30 @@
+<a href="/" class="btn">Back</a>
+<h2>Add New Product</h2>
+
+<?php echo $this->tag->form("addproduct/add"); ?>
+    <p>
+        <label for="name">Name</label>
+        <?php echo $this->tag->textField("name"); ?>
+    </p>
+    <p>
+        <label for="descrition">Description</label>
+        <?php echo $this->tag->textArea("description"); ?>
+    </p>
+
+    <p>
+        <label for="tags">Tags</label>
+        <?php echo $this->tag->textField("tags"); ?>
+    </p>
+    <p>
+        <label for="price">Price</label>
+        <?php echo $this->tag->textField("price"); ?>
+    </p>
+    <p>
+        <label for="stock">Stock</label>
+        <?php echo $this->tag->textField("stock"); ?>
+    </p>
+    <p>
+        <?php echo $this->tag->submitButton("Add"); ?>
+    </p>
+
+</form>

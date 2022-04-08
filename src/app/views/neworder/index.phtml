@@ -1,0 +1,38 @@
+<a href="/" class="btn">Back</a>
+
+       <h2>Place New Order</h2>
+
+<?php echo $this->tag->form("neworder/placenew"); ?>
+    <p>
+        <label for="name">Customer Name</label>
+        <?php echo $this->tag->textField("cname"); ?>
+    </p>
+    <p>
+        <label for="descrition">Customer Address</label>
+        <?php echo $this->tag->textArea("caddr"); ?>
+    </p>
+
+    <p>
+        <label for="tags">Zipcode</label>
+        <?php echo $this->tag->textField("zipcode"); ?>
+    </p>
+    <p>
+        <label for="price">Product</label>
+        <?php echo $this->tag->selectStatic(
+        "product",
+       [
+        "Mobile" => "Mobile",
+        "Television" => "Television",
+        ]
+       ); ?>
+    </p>
+    
+    <p>
+        <label for="stock">Quantity</label>
+        <?php echo $this->tag->textField("quantity"); ?>
+    </p>
+    <p>
+        <?php echo $this->tag->submitButton("Order"); ?>
+    </p>
+
+</form>
