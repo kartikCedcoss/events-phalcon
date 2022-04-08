@@ -14,7 +14,7 @@ class AddproductController extends Controller
     public function addAction(){
         $products= new Products();
         $eventsManager = new EventsManager();
-        $component = new \App\Components\Aware();
+        $component = new \App\Handler\Aware();
         $component->setEventsManager($eventsManager);
 
            $products->assign([
@@ -30,7 +30,7 @@ class AddproductController extends Controller
         if($success){
            $eventsManager->attach(
            'product',
-            new \App\Components\Listener()
+            new \App\Handler\Listener()
             );
 
           $component->process1();

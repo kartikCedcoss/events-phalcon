@@ -1,5 +1,5 @@
 <?php
-namespace App\Components;
+namespace App\Handler;
 use Phalcon\Di\Injectable;
 use Phalcon\Events\EventsAwareInterface;
 

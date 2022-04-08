@@ -1,5 +1,5 @@
 <?php
-namespace App\Components;
+namespace App\Handler;
 
 use Orders;
 use Phalcon\Events\Event;
@@ -18,7 +18,8 @@ class Listener{
          if ($products->stock == 0){
              $products->stock = $settings->default_stock;
          }
-         if($settings->title->opt=='with'){
+         if($settings->title_opt=='with'){
+             
              $products->name = $products->tags." + ".$products->name;
          }
          $products->save();  

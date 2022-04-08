@@ -13,7 +13,7 @@ $loader->registerDirs(
 );
 $loader->registerNamespaces(
     [
-        'App\Components' => APP_PATH . '/component/'
+        'App\Handler' => APP_PATH . '/handler/'
         
     ]
 );

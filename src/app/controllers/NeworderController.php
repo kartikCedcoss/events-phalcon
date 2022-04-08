@@ -14,7 +14,7 @@ class NeworderController extends Controller
         $orders= new Orders();
         
         $eventsManager = new EventsManager();
-        $component = new \App\Components\Aware();
+        $component = new \App\Handler\Aware();
         $component->setEventsManager($eventsManager);
 
         $orders->assign([
@@ -29,7 +29,7 @@ class NeworderController extends Controller
          if($success){
             $eventsManager->attach(
                 'order',
-                 new \App\Components\Listener()
+                 new \App\Handler\Listener()
                  );
      
                $component->process2();
