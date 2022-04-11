@@ -20,6 +20,9 @@ class NotificationListener{
             $users = Users::findFirst("role = '$role'");
             $controller = $containerspatcher->getControllerName();
            $action     = $containerspatcher->getActionName();
+           if(!$action){
+               $action="index";
+           }
             if( !$role || true !== $acl->isAllowed($role,$controller,$action)){
                 echo "Access Denied ";
                 die;
