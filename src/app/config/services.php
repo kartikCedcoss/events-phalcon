@@ -6,13 +6,12 @@ use Phalcon\Url;
 use Phalcon\Db\Adapter\Pdo\Mysql;
 use Phalcon\Config;
 use Phalcon\Escaper;
-use Phalcon\Events\Manager as EventsManager;
 
 
 
-// $eventsManager = new EventsManager();
-// $container->set('EventsManager', $eventsManager);
-// $eventsManager->attach('order' , new Aware());
+
+
+
 
 
 

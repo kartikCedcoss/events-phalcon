@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use Phalcon\Mvc\Controller;
 use Phalcon\Events\Manager as EventsManager;
-use Phalcon\Events\ManagerInterface;
+
 
 class AddproductController extends Controller
 {
